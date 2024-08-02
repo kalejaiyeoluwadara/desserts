@@ -1,10 +1,9 @@
-import { cart, thumb } from "@/icons/icons";
 import Image from "next/image";
 import React from "react";
 import { ImageProp } from "./MenuList";
 import AddToCart from "./AddToCart";
 
-interface CardProps {
+export interface CardProps {
   image: ImageProp;
   name: string;
   category: string;
@@ -14,7 +13,7 @@ interface CardProps {
 function Card({ image, name, category, price }: CardProps) {
   return (
     <section className="h-auto w-[230px]">
-      <div className="w-full h-[220px] flex-center relative ">
+      <div className="w-full h-[220px] flex-center relative">
         <Image
           width={230}
           height={220}
@@ -22,7 +21,7 @@ function Card({ image, name, category, price }: CardProps) {
           className="object-cover w-full h-full rounded-md"
           alt={name}
         />
-        <AddToCart name={name} />
+        <AddToCart cardProps={{ image, name, category, price }} />
       </div>
       <div className="mt-6">
         <h3 className="text-sm font-light">{category}</h3>
