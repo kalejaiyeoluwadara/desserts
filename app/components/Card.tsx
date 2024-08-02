@@ -12,7 +12,7 @@ export interface CardProps {
 
 function Card({ image, name, category, price }: CardProps) {
   return (
-    <section className="h-auto w-[230px]">
+    <section className="h-auto w-full sm:w-[230px]">
       <div className="w-full h-[220px] flex-center relative">
         <Image
           width={230}

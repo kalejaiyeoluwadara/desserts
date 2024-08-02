@@ -20,7 +20,7 @@ interface Item {
 function MenuList() {
   const [menu, setMenu] = useState<Item[]>(data);
   return (
-    <section className="sm:col-span-2 sm:block flex items-center sm:w-auto justify-center flex-col">
+    <section className="sm:col-span-2 sm:block flex items-start sm:w-auto justify-center flex-col">
       <h2 className="text-3xl text-rose-900 font-bold mb-6 ">Dessert</h2>
       <div className="grid items-center justify-center w-auto sm:grid-cols-3  gap-4 grid-cols-1">
         {data.map((item, id) => {
