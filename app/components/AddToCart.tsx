@@ -25,6 +25,7 @@ function AddToCart({ cardProps }: AddToCartProps) {
         count: 1,
         price: cardProps.price,
         base_price: cardProps.price,
+        image: cardProps.image.mobile,
       },
     ];
     setCart(updatedCart);

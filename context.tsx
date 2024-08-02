@@ -15,6 +15,7 @@ interface Cart {
   count: number;
   base_price: number;
   name: string;
+  image: string;
   price: number;
 }
 
