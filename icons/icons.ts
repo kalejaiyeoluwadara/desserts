@@ -5,6 +5,7 @@ import cancel from "@/public/assets/images/icon-remove-item.svg";
 import empty_cart from "@/public/assets/images/illustration-empty-cart.svg";
 import increase_count from "@/public/assets/images/icon-increment-quantity.svg";
 import decrease_count from "@/public/assets/images/icon-decrement-quantity.svg";
+import confirmed from "@/public/assets/images/icon-order-confirmed.svg";
 
 export {
   cart,
@@ -14,4 +15,5 @@ export {
   empty_cart,
   increase_count,
   decrease_count,
+  confirmed,
 };

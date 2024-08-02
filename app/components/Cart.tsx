@@ -2,8 +2,9 @@
 import { useGlobal } from "@/context";
 import { cabbage, cancel, empty_cart } from "@/icons/icons";
 import Image from "next/image";
+import Button from "./Button";
 const CartComponent = () => {
-  const { cart, setCart } = useGlobal();
+  const { cart, setCart, setModal } = useGlobal();
 
   const handleRemoveItem = (index: number) => {
     setCart(cart.filter((_, i) => i !== index));
@@ -12,13 +13,7 @@ const CartComponent = () => {
   const calculateTotal = () => {
     return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
   };
-  //   if (cart.length == 0) {
-  //     return (
-  //       <div>
-  //         <Image src={empty_cart} alt="" height={100} width={100} />
-  //       </div>
-  //     );
-  //   }
+
   return (
     <div className="min-h-[300px] sm:mt-0 mt-8 px-6 py-6 bg-white rounded-md w-auto p-4 ">
       <h2 className="text-2xl mb-6 text-red font-bold ">
@@ -75,9 +70,7 @@ const CartComponent = () => {
               </p>
             </section>
             <section className="w-full items-center justify-center">
-              <button className="w-full rounded-full h-[55px] hover:bg-red-900 bg-red text-white font-semibold text-base ">
-                Confirm Order
-              </button>
+              <Button name="Confirm Order" handleClick={() => setModal(true)} />
             </section>
           </div>
         ) : (

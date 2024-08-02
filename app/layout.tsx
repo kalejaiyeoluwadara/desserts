@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Red_Hat_Text } from "next/font/google";
 import "./globals.css";
 import AppProvider from "@/context";
+import Modal from "./components/Modal";
 
 const redHatText = Red_Hat_Text({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AppProvider>
-        <body className={redHatText.className}>{children}</body>
+        <body className={redHatText.className}>
+          {children} <Modal />{" "}
+        </body>
       </AppProvider>
     </html>
   );

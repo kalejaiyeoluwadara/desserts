@@ -6,6 +6,8 @@ interface AppContextType {
   // Add any state or functions that you will provide through context
   exampleState: string;
   cart: Cart[];
+  modal: boolean;
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
   setExampleState: React.Dispatch<React.SetStateAction<string>>;
   setCart: React.Dispatch<React.SetStateAction<Cart[]>>;
 }
@@ -26,9 +28,10 @@ interface Props {
 function AppProvider({ children }: Props) {
   const [exampleState, setExampleState] = useState<string>("");
   const [cart, setCart] = useState<Cart[]>([]);
+  const [modal, setModal] = useState(false);
   return (
     <AppContext.Provider
-      value={{ exampleState, setExampleState, cart, setCart }}
+      value={{ exampleState, setExampleState, cart, setCart, modal, setModal }}
     >
       {children}
     </AppContext.Provider>
