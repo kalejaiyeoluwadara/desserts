@@ -12,8 +12,8 @@ function Modal() {
   return (
     <>
       {modal && (
-        <main className="flex-center  min-h-screen w-screen fixed z-50 top-0 left-0 bg-black bg-opacity-[0.8]">
-          <div className=" h-[500px]  w-[500px] rounded-xl bg-white px-6 pt-6   ">
+        <main className="sm:flex-center flex justify-end items-end  min-h-screen w-screen fixed z-50 top-0 left-0 bg-black bg-opacity-[0.8]">
+          <div className=" sm:h-[500px] h-[600px]  w-[500px] rounded-xl bg-white px-6 pt-6   ">
             <section>
               <Image
                 className="mb-4"
@@ -29,7 +29,7 @@ function Modal() {
                 We hope you enjoy your food
               </p>
             </section>
-            <section className="h-[240px] overflow-y-scroll w-full bg-rose-50 p-4  my-6 rounded-md ">
+            <section className="sm:h-[240px] relative bottom-0 h-[300px] overflow-y-scroll w-full bg-rose-50 p-4  my-6 rounded-md ">
               <div>
                 <section className="flex flex-col gap-2">
                   {cart.map((item, index) => (
